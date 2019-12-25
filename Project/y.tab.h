@@ -40,56 +40,48 @@
       know about them.  */
    enum yytokentype {
      INT = 258,
-     FLOAT = 259,
-     CHAR = 260,
-     DOUBLE = 261,
-     FOR = 262,
-     WHILE = 263,
-     IF = 264,
-     ID = 265,
-     INT_NUM = 266,
-     FLOAT_NUM = 267,
-     ADD = 268,
-     SUB = 269,
-     DIV = 270,
-     MUL = 271,
-     POW = 272,
-     GT = 273,
-     LT = 274,
-     NE = 275,
-     EQ = 276,
-     GE = 277,
-     LE = 278
+     CHAR = 259,
+     FLOAT = 260,
+     ASSIGN = 261,
+     IF = 262,
+     SEMICOLON = 263,
+     ID = 264,
+     OPENKR = 265,
+     CLOSEKR = 266,
+     OPENGIOM = 267,
+     CLOSEGIOM = 268,
+     NUMBER = 269
    };
 #endif
 /* Tokens.  */
 #define INT 258
-#define FLOAT 259
-#define CHAR 260
-#define DOUBLE 261
-#define FOR 262
-#define WHILE 263
-#define IF 264
-#define ID 265
-#define INT_NUM 266
-#define FLOAT_NUM 267
-#define ADD 268
-#define SUB 269
-#define DIV 270
-#define MUL 271
-#define POW 272
-#define GT 273
-#define LT 274
-#define NE 275
-#define EQ 276
-#define GE 277
-#define LE 278
+#define CHAR 259
+#define FLOAT 260
+#define ASSIGN 261
+#define IF 262
+#define SEMICOLON 263
+#define ID 264
+#define OPENKR 265
+#define CLOSEKR 266
+#define OPENGIOM 267
+#define CLOSEGIOM 268
+#define NUMBER 269
 
 
 
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+typedef union YYSTYPE
+{
+
+/* Line 1676 of yacc.c  */
+#line 24 "parser.y"
+int ival; double dval; char str[120]; 
+
+
+/* Line 1676 of yacc.c  */
+#line 84 "y.tab.h"
+} YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
