@@ -11,7 +11,7 @@ struct Node{
 	char str[100];
 	struct Node * next;
 };
-struct Node *add(struct Node *head , char * str);
+struct Node *addfirst(struct Node *head , char * str);
 struct Node *addend(struct Node *head , char * str);
 void printTAC();
 struct Node * head = NULL;
@@ -48,11 +48,14 @@ Stmts:
 Stmt:
 		Block
 		|IfStmt { 
+		/*
 				char buf[256];
 				sprintf(buf, "afterIfLabel%d:\n" , temp);
 				temp++;
-				head = add(head,buf); 
+				head = addfirst(head,buf); 
+			*/
 			
+			printf("afterIfLabel%d:\n" , temp);temp++;
 				}
 		|AssignStmt
 		|DeclStmt
@@ -62,7 +65,7 @@ AssignStmt:
         Type ID ASSIGN Expr SEMICOLON 		{ 
 												char buf[256];
 												sprintf(buf, "%s %s = %d;", $1 , $2 , $4);
-												head = add(head,buf); 
+												head = addfirst(head,buf); 
 												
 											}
         ;
@@ -73,7 +76,7 @@ IfStmt:
 											
 												char buf[256];
 												sprintf(buf,"if(%d==0) goto afterIfLabel%d", $3 , temp);
-												head = add(head , buf);
+												head = addfirst(head , buf);
 												
 										}
 		;
@@ -105,7 +108,7 @@ int isTrue(int number){
 	return 0;
 }
 
-struct Node *add(struct Node *head , char * str){
+struct Node *addfirst(struct Node *head , char * str){
 	struct Node *temp = head;
     struct Node *new_node;
     new_node = (struct Node *)malloc(sizeof(struct Node));
@@ -139,6 +142,13 @@ struct Node *addend(struct Node *head , char * str){
 		return head;
     }
 
+}
+
+
+	
+	if(strcmp(itr->str,str)==0)
+		return itr;
+	return NULL;
 }
 
 

@@ -82,7 +82,7 @@ struct Node{
 	char str[100];
 	struct Node * next;
 };
-struct Node *add(struct Node *head , char * str);
+struct Node *addfirst(struct Node *head , char * str);
 struct Node *addend(struct Node *head , char * str);
 void printTAC();
 struct Node * head = NULL;
@@ -459,8 +459,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    36,    36,    40,    44,    45,    49,    50,    57,    58,
-      62,    72,    85,    90,    91,    92,    97
+       0,    36,    36,    40,    44,    45,    49,    50,    60,    61,
+      65,    75,    88,    93,    94,    95,   100
 };
 #endif
 
@@ -1380,22 +1380,25 @@ yyreduce:
 /* Line 1455 of yacc.c  */
 #line 50 "parser.y"
     { 
+		/*
 				char buf[256];
 				sprintf(buf, "afterIfLabel%d:\n" , temp);
 				temp++;
-				head = add(head,buf); 
+				head = addfirst(head,buf); 
+			*/
 			
+			printf("afterIfLabel%d:\n" , temp);temp++;
 				}
     break;
 
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 62 "parser.y"
+#line 65 "parser.y"
     { 
 												char buf[256];
 												sprintf(buf, "%s %s = %d;", (yyvsp[(1) - (5)].str) , (yyvsp[(2) - (5)].str) , (yyvsp[(4) - (5)].ival));
-												head = add(head,buf); 
+												head = addfirst(head,buf); 
 												
 											}
     break;
@@ -1403,12 +1406,12 @@ yyreduce:
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 72 "parser.y"
+#line 75 "parser.y"
     {
 											
 												char buf[256];
 												sprintf(buf,"if(%d==0) goto afterIfLabel%d", (yyvsp[(3) - (5)].ival) , temp);
-												head = add(head , buf);
+												head = addfirst(head , buf);
 												
 										}
     break;
@@ -1416,14 +1419,14 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 85 "parser.y"
+#line 88 "parser.y"
     { printf("%s %s;\n" , (yyvsp[(1) - (3)].str) , (yyvsp[(2) - (3)].str)); }
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1427 "y.tab.c"
+#line 1430 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1635,7 +1638,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 100 "parser.y"
+#line 103 "parser.y"
 
 
 int isTrue(int number){
@@ -1644,7 +1647,7 @@ int isTrue(int number){
 	return 0;
 }
 
-struct Node *add(struct Node *head , char * str){
+struct Node *addfirst(struct Node *head , char * str){
 	struct Node *temp = head;
     struct Node *new_node;
     new_node = (struct Node *)malloc(sizeof(struct Node));
