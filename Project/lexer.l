@@ -15,11 +15,11 @@ ws		{delim}+
 
 %%
 {ws}		{}
-\{			{ return OPENKR; }
-\}			{ return CLOSEKR; }
+"{"			{ return OPENAKOLAD; }
+"}"			{ return CLOSEAKOLAD; }
 \;			{ return SEMICOLON; }
-\(			{ return OPENGIOM; }
-\)			{ return CLOSEGIOM; }
+\(			{ return OPENPARAN; }
+\)			{ return CLOSEPARAN; }
 "if"		{ return IF; }
 "while"		{ return WHILE; }
 "for"		{ return FOR; }

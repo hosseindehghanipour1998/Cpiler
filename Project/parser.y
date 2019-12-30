@@ -7,92 +7,61 @@ int yylex(void);
 int yyerror(const char *s);
 
 
-struct Node{
-	char str[100];
-	struct Node * next;
-};
-struct Node *addfirst(struct Node *head , char * str);
-struct Node *addend(struct Node *head , char * str);
-void printTAC();
-struct Node * head = NULL;
-
-int temp = 0;
-
 %}
 
 
 %union{int ival; double dval; char str[120]; }
 
-%token<str> INT CHAR FLOAT ASSIGN IF SEMICOLON ID OPENKR CLOSEKR OPENGIOM CLOSEGIOM
+%token<str> INT CHAR FLOAT ASSIGN IF SEMICOLON ID OPENAKOLAD CLOSEAKOLAD OPENPARAN CLOSEPARAN WHILE FOR LE GE EQ LT GT
 %token<ival> NUMBER
 
-%type <str> Type
+%type <str> Type Stmt IfStmt DeclStmt Stmts
 %type <ival> Expr
 
 %error-verbose
 %%
 
 Program: 
-        Block {  printTAC() ;}
+		Block 
         ;
 
 Block:
-		OPENKR Stmts CLOSEKR
+		OPENAKOLAD Stmts CLOSEAKOLAD 
 		;
 		
 Stmts:
-		Stmts Stmt
+		Stmts Stmt { strcat($1,"\n") ; strcat($1,$2) ; strcpy($$,$1);}
 		| Stmt 
 		;
 		
 Stmt:
 		Block
-		|IfStmt { 
-		/*
-				char buf[256];
-				sprintf(buf, "afterIfLabel%d:\n" , temp);
-				temp++;
-				head = addfirst(head,buf); 
-			*/
-			
-			printf("afterIfLabel%d:\n" , temp);temp++;
-				}
+		|IfStmt
 		|AssignStmt
-		|DeclStmt
+		|DeclStmt 
 		;
 		
 AssignStmt:     
-        Type ID ASSIGN Expr SEMICOLON 		{ 
-												char buf[256];
-												sprintf(buf, "%s %s = %d;", $1 , $2 , $4);
-												head = addfirst(head,buf); 
-												
-											}
+        Type ID ASSIGN Expr SEMICOLON						
         ;
 
 		
 IfStmt:
-		IF OPENGIOM Expr CLOSEGIOM Stmt {
-											
-												char buf[256];
-												sprintf(buf,"if(%d==0) goto afterIfLabel%d", $3 , temp);
-												head = addfirst(head , buf);
-												
-										}
+		IF OPENPARAN Expr CLOSEPARAN Stmts {printf("if(%d==0) goto afterIfLabel#\n%s\nafterIfLabel#;", $3 , $5);}
 		;
 		
 		
 
 		
 DeclStmt:
-		Type ID SEMICOLON { printf("%s %s;\n" , $1 , $2); }
+		Type ID SEMICOLON  { strcat($1," "); strcat($1,$2) ; strcpy($$,$1);}
 		;
 		
 				
 Type:
-		INT
-		|FLOAT
-		|CHAR
+		INT 	
+		|FLOAT 	
+		|CHAR 	
 		;
 		
 		
@@ -102,61 +71,3 @@ Expr:
 
 %%
 
-int isTrue(int number){
-	if(number>0)
-		return 1;
-	return 0;
-}
-
-struct Node *addfirst(struct Node *head , char * str){
-	struct Node *temp = head;
-    struct Node *new_node;
-    new_node = (struct Node *)malloc(sizeof(struct Node));
-    strcpy(new_node->str,str);
-    new_node->next = NULL;
-
-    if(head == NULL)
-        return new_node;
-    else{
-		new_node->next = head;
-		head = new_node;
-        return new_node;
-    }
-
-}
-
-struct Node *addend(struct Node *head , char * str){
-	struct Node *temp = head;
-    struct Node *new_node;
-    new_node = (struct Node *)malloc(sizeof(struct Node));
-    strcpy(new_node->str,str);
-    new_node->next = NULL;
-
-    if(head == NULL)
-        return new_node;
-    else{
-		
-		while(temp->next != NULL)
-			temp = temp->next;
-		temp->next = new_node;
-		return head;
-    }
-
-}
-
-
-	
-	if(strcmp(itr->str,str)==0)
-		return itr;
-	return NULL;
-}
-
-
-void printTAC(){
-	struct Node *temp = head;
-	while(temp != NULL){
-		printf("%s\n" , temp->str);
-		temp = temp->next;
-	}
-		
-}

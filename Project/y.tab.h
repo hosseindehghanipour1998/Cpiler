@@ -46,11 +46,18 @@
      IF = 262,
      SEMICOLON = 263,
      ID = 264,
-     OPENKR = 265,
-     CLOSEKR = 266,
-     OPENGIOM = 267,
-     CLOSEGIOM = 268,
-     NUMBER = 269
+     OPENAKOLAD = 265,
+     CLOSEAKOLAD = 266,
+     OPENPARAN = 267,
+     CLOSEPARAN = 268,
+     WHILE = 269,
+     FOR = 270,
+     LE = 271,
+     GE = 272,
+     EQ = 273,
+     LT = 274,
+     GT = 275,
+     NUMBER = 276
    };
 #endif
 /* Tokens.  */
@@ -61,11 +68,18 @@
 #define IF 262
 #define SEMICOLON 263
 #define ID 264
-#define OPENKR 265
-#define CLOSEKR 266
-#define OPENGIOM 267
-#define CLOSEGIOM 268
-#define NUMBER 269
+#define OPENAKOLAD 265
+#define CLOSEAKOLAD 266
+#define OPENPARAN 267
+#define CLOSEPARAN 268
+#define WHILE 269
+#define FOR 270
+#define LE 271
+#define GE 272
+#define EQ 273
+#define LT 274
+#define GT 275
+#define NUMBER 276
 
 
 
@@ -75,12 +89,12 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 24 "parser.y"
+#line 13 "parser.y"
 int ival; double dval; char str[120]; 
 
 
 /* Line 1676 of yacc.c  */
-#line 84 "y.tab.h"
+#line 98 "y.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
