@@ -21,53 +21,52 @@ int yyerror(const char *s);
 %error-verbose
 %%
 
-Program: 
-		Block 
+Program:
+		Block
         ;
 
 Block:
-		OPENAKOLAD Stmts CLOSEAKOLAD 
+		OPENAKOLAD Stmts CLOSEAKOLAD
 		;
-		
+
 Stmts:
 		Stmts Stmt { strcat($1,"\n") ; strcat($1,$2) ; strcpy($$,$1);}
-		| Stmt 
+		| Stmt
 		;
-		
+
 Stmt:
 		Block
 		|IfStmt
 		|AssignStmt
-		|DeclStmt 
+		|DeclStmt
 		;
-		
-AssignStmt:     
-        Type ID ASSIGN Expr SEMICOLON						
+
+AssignStmt:
+        Type ID ASSIGN Expr SEMICOLON
         ;
 
-		
+
 IfStmt:
 		IF OPENPARAN Expr CLOSEPARAN Stmts {printf("if(%d==0) goto afterIfLabel#\n%s\nafterIfLabel#;", $3 , $5);}
 		;
-		
-		
 
-		
+
+
+
 DeclStmt:
 		Type ID SEMICOLON  { strcat($1," "); strcat($1,$2) ; strcpy($$,$1);}
 		;
-		
-				
+
+
 Type:
-		INT 	
-		|FLOAT 	
-		|CHAR 	
+		INT
+		|FLOAT
+		|CHAR
 		;
-		
-		
+
+
 Expr:
 	NUMBER
 	;
 
 %%
-
