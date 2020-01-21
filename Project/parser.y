@@ -6,6 +6,8 @@
 int yylex(void);
 int yyerror(const char *s);
 
+int ifBlockCounter = 0 ;
+
 
 %}
 
@@ -44,7 +46,7 @@ DeclStmt:
 
 
 Stmts:
-		Stmts Stmt { strcat($1,"\n") ; strcat($1,$2) ; strcpy($$,$1);}
+		Stmts Stmt
 		| Stmt
 		;
 
@@ -62,15 +64,30 @@ Type:
 		|DOUBLE {strcpy($$,"double");}
 		;
 
+IfStmt:
+		IF 							{;}
+		OPENPARAN 			{;}
+		Expr						{
+										printf("if(%s == 0) goto afterIfLabel%d;\n",$3,$1 = ifBlockCounter++)
+										printf("goto ifLabel%d:",$1);
+										printf("ifLabel%d:",$1);
+										}
+		CLOSEPARAN
+		 Stmts					{printf("afterIfLabel%d",$1);}
+		;
+
+
 
 AssignStmt:
-        Type ID ASSIGN Expr SEMICOLON
+        Type
+				ID
+				ASSIGN  {printf("%s %s =  " , $1 , $2 );}
+				Expr 		{printf("%s",$4);}
+				SEMICOLON {printf(";");}
         ;
 
 
-IfStmt:
-		IF OPENPARAN Expr CLOSEPARAN Stmts {printf("if(%d==0) goto afterIfLabel#\n%s\nafterIfLabel#;", $3 , $5);}
-		;
+
 
 
 
