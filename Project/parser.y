@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 int yylex(void);
 int yyerror(const char *s);
 
@@ -15,7 +15,7 @@ int ifBlockCounter = 0 ;
 
 %union{int ival; double dval; char str[120]; }
 
-%token<str> INT CHAR FLOAT DOUBLE ASSIGN IF SEMICOLON ID OPENAKOLAD CLOSEAKOLAD OPENPARAN CLOSEPARAN WHILE FOR LE GE EQ LT GT
+%token<str> PLUS MINUS SUBTRACT MULTIPLY MODE INT CHAR FLOAT DOUBLE ASSIGN IF SEMICOLON ID OPENAKOLAD CLOSEAKOLAD OPENPARAN CLOSEPARAN WHILE FOR LE GE EQ LT GT
 %token<ival> NUMBER
 
 %type <str> Type Stmt IfStmt DeclStmt Stmts
@@ -91,7 +91,7 @@ AssignStmt:
 Expr :
 			Term								{strcpy($$,$1);}
 			|NUMBER							{sprintf($$,"%d",$1);}
-			|Expr ASSIGN ID			{strcpy($$, $3); printf("%s = %s;\n", $1, $3);
+			|Expr ASSIGN ID			{strcpy($$, $3); printf("%s = %s;\n", $1, $3)};
 			;
 
 

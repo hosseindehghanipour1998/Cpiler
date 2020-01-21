@@ -39,14 +39,14 @@ ws		{delim}+
 \=			 { return ASSIGN;}
 "!="		 { return NOTEQUAL;}
 
-"+"			{return PLUS;}
+"+"					{return PLUS;}
 "-"         {return MINUS;}
 "*"         {return MULTIPLY;}
 "/"         {return SUBTRACT;}
 "%"         {return MODE;}
-	
 
-	
+
+
 {id}		{strcpy(yylval.str,yytext) ; return ID; }
 {digit}+	{yylval.ival=atoi(yytext); return NUMBER; }
 .			{yyerror("Invalid Command");}
