@@ -10,9 +10,10 @@ int yyerror(const char *s);
 %}
 
 
+
 %union{int ival; double dval; char str[120]; }
 
-%token<str> INT CHAR FLOAT ASSIGN IF SEMICOLON ID OPENAKOLAD CLOSEAKOLAD OPENPARAN CLOSEPARAN WHILE FOR LE GE EQ LT GT
+%token<str> INT CHAR FLOAT DOUBLE ASSIGN IF SEMICOLON ID OPENAKOLAD CLOSEAKOLAD OPENPARAN CLOSEPARAN WHILE FOR LE GE EQ LT GT
 %token<ival> NUMBER
 
 %type <str> Type Stmt IfStmt DeclStmt Stmts
@@ -21,13 +22,26 @@ int yyerror(const char *s);
 %error-verbose
 %%
 
+
+
+
 Program:
-		Block
+			  Block
         ;
 
 Block:
-		OPENAKOLAD Stmts CLOSEAKOLAD
+		OPENAKOLAD { printf("{\n")} Stmts CLOSEAKOLAD {printf("}")}
 		;
+
+IDs :
+		IDs , ID {sprintf($$,"%s , %s",$1,$3);}
+		| ID		{sprintf($$,"%s",$1);}
+
+
+DeclStmt:
+				Type IDs SEMICOLON  { printf("%s %s ; \n" , $1 , $2); }
+				;
+
 
 Stmts:
 		Stmts Stmt { strcat($1,"\n") ; strcat($1,$2) ; strcpy($$,$1);}
@@ -41,6 +55,14 @@ Stmt:
 		|DeclStmt
 		;
 
+Type:
+		INT {strcpy($$,"int");}
+		|FLOAT {strcpy($$,"float");}
+		|CHAR {strcpy($$,"char");}
+		|DOUBLE {strcpy($$,"double");}
+		;
+
+
 AssignStmt:
         Type ID ASSIGN Expr SEMICOLON
         ;
@@ -53,16 +75,11 @@ IfStmt:
 
 
 
-DeclStmt:
-		Type ID SEMICOLON  { strcat($1," "); strcat($1,$2) ; strcpy($$,$1);}
-		;
 
 
-Type:
-		INT
-		|FLOAT
-		|CHAR
-		;
+
+
+
 
 
 Expr:
