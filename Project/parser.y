@@ -39,7 +39,7 @@ IDs :
 		IDs , ID 									{sprintf($$,"%s , %s",$1,$3);}
 		| ID											{sprintf($$,"%s",$1);}
 		| IDs , ID ASSIGN Expr 		{sprintf($$,"%s , %s = %s",$1,$2,$3);}
-		|ID ASSIGN Expr						{sprintf($$,"%s = %s",$1,$3);}	
+		|ID ASSIGN Expr						{sprintf($$,"%s = %s",$1,$3);}
 
 
 DeclStmt:
@@ -89,6 +89,10 @@ AssignStmt:
         ;
 
 Expr :
+			Term								{strcpy($$,$1);}
+			|NUMBER							{sprintf($$,"%d",$1);}
+			|Expr ASSIGN ID			{strcpy($$, $3); printf("%s = %s;\n", $1, $3);
+			;
 
 
 
@@ -98,15 +102,5 @@ Expr :
 
 
 
-
-
-
-
-
-
-
-Expr:
-	NUMBER
-	;
 
 %%
