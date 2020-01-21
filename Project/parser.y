@@ -36,8 +36,10 @@ Block:
 		;
 
 IDs :
-		IDs , ID {sprintf($$,"%s , %s",$1,$3);}
-		| ID		{sprintf($$,"%s",$1);}
+		IDs , ID 									{sprintf($$,"%s , %s",$1,$3);}
+		| ID											{sprintf($$,"%s",$1);}
+		| IDs , ID ASSIGN Expr 		{sprintf($$,"%s , %s = %s",$1,$2,$3);}
+		|ID ASSIGN Expr						{sprintf($$,"%s = %s",$1,$3);}	
 
 
 DeclStmt:
@@ -81,10 +83,14 @@ IfStmt:
 AssignStmt:
         Type
 				ID
-				ASSIGN  {printf("%s %s =  " , $1 , $2 );}
-				Expr 		{printf("%s",$4);}
-				SEMICOLON {printf(";");}
+				ASSIGN  		{printf("%s %s =  " , $1 , $2 );}
+				Expr 				{printf("%s",$4);}
+				SEMICOLON 	{printf(";");}
         ;
+
+Expr :
+
+
 
 
 
