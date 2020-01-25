@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6642945e-041b-442d-b729-a51627da34cd" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
+    <list default="true" id="6642945e-041b-442d-b729-a51627da34cd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/KeyPressPrinter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/KeyPressPrinter$KeyEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/KeyPressPrinter$KeyEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/KeyPressPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/KeyPressPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay$KeyEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay$KeyEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay$RectangleBlinkEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay$RectangleBlinkEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/SingleLetterDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/input.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/output.c" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/an-other-compiler-compiler/output.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,37 +31,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/editor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="138" column="117" selection-start-line="138" selection-start-column="117" selection-end-line="138" selection-end-column="117" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/output.c">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input.c">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -53,64 +38,11 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>cursor.set</find>
-      <find>cursorY +=</find>
-      <find>cursorY +</find>
-      <find>5</find>
-      <find>textHeight</find>
-      <find>setCursorInBestPos</find>
-      <find>lowerBoundY</find>
-      <find>updateCursor</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/SingleLetterDisplay.java" />
-        <option value="$PROJECT_DIR$/examples/KeyPressPrinter.java" />
-        <option value="$PROJECT_DIR$/TextBufferTest.java" />
-        <option value="$PROJECT_DIR$/BlinkCursor.java" />
-        <option value="$PROJECT_DIR$/KeyEventHandler.java" />
-        <option value="$PROJECT_DIR$/MouseClickHandler.java" />
-        <option value="$PROJECT_DIR$/BlinkCursorHandler.java" />
-        <option value="$PROJECT_DIR$/Editor.java" />
-        <option value="$PROJECT_DIR$/TextBuffer.java" />
-        <option value="$PROJECT_DIR$/editor.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="462" />
-    <option name="y" value="68" />
-    <option name="width" value="960" />
-    <option name="height" value="788" />
-  </component>
+  <component name="ProjectId" id="1Wqi5tJmewetXJ7YGxt52TFojZV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="text_editor-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="text_editor-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/jeremyd/Desktop/text_editor/TextBuffer.java" />
@@ -120,6 +52,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -248,97 +181,21 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="2891000" />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960325" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.17184943" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.35532996" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Style Checker" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32569557" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32916668" />
-      <window_info anchor="right" id="Maven" order="9" />
-      <window_info anchor="right" id="Database" order="10" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SingleLetterDisplay.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java" />
-    <entry file="file://$PROJECT_DIR$/examples/SingleLetterDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TextBufferTest.java" />
-    <entry file="file://$PROJECT_DIR$/KeyEventHandler.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/scene/Scene.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/javafx.base/javafx/event/Event.java" />
-    <entry file="file://$PROJECT_DIR$/MouseClickHandler.java" />
-    <entry file="file://$PROJECT_DIR$/BlinkCursorHandler.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/javax/swing/JTextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TextBuffer.java" />
-    <entry file="file://$PROJECT_DIR$/examples/KeyPressPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="42" column="17" lean-forward="true" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="138" column="117" selection-start-line="138" selection-start-column="117" selection-end-line="138" selection-end-column="117" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/output.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

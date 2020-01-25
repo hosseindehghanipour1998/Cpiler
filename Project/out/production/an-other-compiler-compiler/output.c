@@ -145,3 +145,7 @@ goto whileLabelNo1Condition;
 afterWhileNo1:
 ;
 }
+{
+int ttt = 3333;
+;
+}
