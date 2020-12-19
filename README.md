@@ -1,5 +1,5 @@
 # Compiler 
- - Written in Java
+ - Written in Java, Yacc and Flex
  
  - A joint work with [Erfan Sabouri](https://github.com/erfaansabouri)
  
